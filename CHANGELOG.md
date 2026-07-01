@@ -34,7 +34,6 @@ This project follows the Keep a Changelog format and Semantic Versioning (SemVer
 
 ## [v0.1.0] - 2026-06-30
 
-### Added / 新增
 
 ### Added / 新增
 
