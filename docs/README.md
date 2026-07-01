@@ -28,6 +28,7 @@ Every lesson corresponds to one development stage of the operating system.
 | Lesson 02 | Print First Character |
 | Lesson 03 | Print String |
 | Lesson 04 | Understanding VGA Text Mode |
+| Lesson 05 | Direct VGA Memory Output |
 
 ---
 

@@ -54,9 +54,10 @@ The purpose of this project is not only to build a simple operating system, but 
 ### v0.2.0-dev
 
 - ✅ Lesson 04 - Understanding VGA Text Mode
-- ⏳ Direct VGA Memory Output
+- ✅ Lesson 05 - Direct VGA Memory Output
 - ⏳ Screen Driver
 - ⏳ Cursor Control
+- ⏳ Multiple Character Output
 
 ---
 
@@ -88,6 +89,7 @@ MyOS
 | Lesson 02 | Print First Character |
 | Lesson 03 | Print String |
 | Lesson 04 | Understanding VGA Text Mode |
+| Lesson 05 | Direct VGA Memory Output |
 
 Detailed notes are available in the **docs/** directory.
 
@@ -104,10 +106,11 @@ Detailed notes are available in the **docs/** directory.
 - [x] Print First Character
 - [x] Print String
 
-### 🚧 v0.2.0-dev - Hardware Access
+### 🚧 v0.2.0-dev
 
 - [x] Understanding VGA Text Mode
-- [ ] Direct VGA Memory Output
+- [x] Direct VGA Memory Output
+- [ ] Multiple Character Output
 - [ ] Screen Driver
 - [ ] Cursor Control
 - [ ] Keyboard Input

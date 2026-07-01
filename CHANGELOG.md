@@ -15,14 +15,16 @@ Versioning follows **Semantic Versioning (SemVer)**.
 ### Added / 新增
 
 - Lesson 04 documentation
+- Lesson 05 documentation
 - VGA Text Mode theory
+- Direct VGA Memory Output
 - Hardware architecture notes
 - Documentation structure improvements
 
 ### Changed / 修改
 
-- README updated to v0.2.0-dev
-- Documentation index updated
+- Updated README for Lesson 05
+- Updated documentation index
 
 ---
 
