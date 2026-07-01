@@ -69,8 +69,8 @@ The purpose of this project is not only to build a simple operating system, but 
 - ✅ Lesson 05 - Direct VGA Memory Output
 - ✅ Lesson 06 (Version 1) - Multiple Character Output
 - ✅ Lesson 06 (Version 2) - String Output Using Loop
-- ⏳ Lesson 06 (Version 3) - Reusable Print Routine
-- ⏳ Screen Driver
+- ✅ Lesson 06 (Version 3) - Reusable Print Routine
+- ⏳ Lesson 07 - Screen Driver
 - ⏳ Cursor Control
 
 ---
@@ -97,8 +97,6 @@ MyOS
 
 ---
 
-## Documentation / 学习文档
-
 | Lesson / 课程 | Topic / 主题 |
 |--------------|--------------|
 | Lesson 01 | Bootloader / 启动加载程序 |
@@ -108,6 +106,7 @@ MyOS
 | Lesson 05 | Direct VGA Memory Output / 直接操作 VGA 显存 |
 | Lesson 06 (Version 1) | Multiple Character Output / 多字符输出 |
 | Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
+| Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
 
 For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
@@ -139,7 +138,7 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 - [x] Direct VGA Memory Output / 直接操作 VGA 显存
 - [x] Multiple Character Output / 多字符输出
 - [x] String Output Using Loop / 循环输出字符串
-- [ ] Reusable Print Routine / 可复用输出函数
+- [x] Reusable Print Routine / 可复用字符串输出函数
 - [ ] Screen Driver / 屏幕驱动
 - [ ] Cursor Control / 光标控制
 
