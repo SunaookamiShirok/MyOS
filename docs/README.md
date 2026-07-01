@@ -6,41 +6,76 @@
 
 ## English
 
-This directory contains all learning notes and development documents for MyOS.
+This directory contains all documentation, tutorials, and development notes for MyOS.
 
-Every lesson corresponds to one development stage of the operating system.
+Each lesson represents a milestone in the operating system development process.
 
 ---
 
 ## 中文
 
-本目录保存 MyOS 的所有学习笔记和开发文档。
+本目录保存 MyOS 的所有开发文档、教程和学习笔记。
 
-每一课对应操作系统开发的一个阶段。
+每一课对应操作系统开发过程中的一个里程碑。
 
 ---
 
-# Lessons
+# Lessons / 课程目录
 
-| Lesson | Topic |
-|---------|------|
+| Lesson | Description |
+|---------|-------------|
 | Lesson 01 | Bootloader |
-| Lesson 02 | Print First Character |
-| Lesson 03 | Print String |
+| Lesson 02 | BIOS Character Output |
+| Lesson 03 | BIOS String Output |
 | Lesson 04 | Understanding VGA Text Mode |
 | Lesson 05 | Direct VGA Memory Output |
+| Lesson 06 (v1) | Multiple Character Output |
 
 ---
 
-# Current Progress
+# Learning Roadmap / 学习路线
 
-Current Version
+```text
+Lesson 01 - Bootloader
+    │
+    ▼
+Lesson 02 - BIOS Character Output
+    │
+    ▼
+Lesson 03 - BIOS String Output
+    │
+    ▼
+Lesson 04 - Understanding VGA Text Mode
+    │
+    ▼
+Lesson 05 - Direct VGA Memory Output
+    │
+    ▼
+Lesson 06 (Version 1) - Multiple Character Output
+    │
+    ▼
+Lesson 06 (Version 2) - String Output
+    │
+    ▼
+Lesson 06 (Version 3) - Reusable Print Routine
+    │
+    ▼
+Lesson 07 - Screen Driver
+```
 
-**v0.2.0-dev**
+# Current Progress / 当前进度
 
-Current Stage
+| Item | Status |
+|------|--------|
+| Current Version | **v0.2.0-dev** |
+| Current Stage | **Hardware Access** |
+| Latest Lesson | **Lesson 06 (Version 1)** |
 
-**Hardware Access**
+---
+
+> Documentation will continue to grow alongside MyOS.
+
+> 本文档将随着 MyOS 的开发持续更新。
 
 ---
 

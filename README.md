@@ -99,60 +99,39 @@ Detailed notes are available in the **docs/** directory.
 
 ## Roadmap / 开发路线
 
-### ✅ v0.1.0 - Bootloader Foundation
+### Phase 1 - Bootloader
 
-- [x] Boot Sector
-- [x] BIOS Text Output
-- [x] Print First Character
-- [x] Print String
+- [x] Bootloader Foundation
+- [x] BIOS Character Output
+- [x] BIOS String Output
 
-### 🚧 v0.2.0-dev
+### Phase 2 - Hardware Access
 
-- [x] Understanding VGA Text Mode
+- [x] VGA Text Mode
 - [x] Direct VGA Memory Output
-- [ ] Multiple Character Output
+- [x] Multiple Character Output (Version 1)
+- [ ] String Output (Version 2)
 - [ ] Screen Driver
 - [ ] Cursor Control
-- [ ] Keyboard Input
 
-### ⏳ v0.3.0 - Protected Mode
+### Phase 3 - Protected Mode
 
+- [ ] A20 Line
 - [ ] Global Descriptor Table (GDT)
 - [ ] Enter Protected Mode
-- [ ] Kernel Entry
 
-### ⏳ v0.4.0 - C/C++ Kernel
+### Phase 4 - Kernel
 
-- [ ] Basic Kernel
-- [ ] Console
-- [ ] Kernel Main
+- [ ] C/C++ Kernel
+- [ ] Console Driver
+- [ ] Memory Management
+- [ ] Interrupt Handling
 
-### ⏳ v0.5.0 - Memory Management
+### Phase 5 - System
 
-- [ ] Physical Memory Manager
-- [ ] Paging
-
-### ⏳ v0.6.0 - Interrupt Handling
-
-- [ ] Interrupt Descriptor Table (IDT)
-- [ ] Programmable Interrupt Controller (PIC)
-- [ ] Timer
 - [ ] Keyboard Driver
-
-### ⏳ v0.7.0 - File System
-
-- [ ] FAT12 Reader
-- [ ] Virtual File System
-
-### ⏳ v0.8.0 - Shell
-
-- [ ] Command Line Interface
-- [ ] Built-in Commands
-
-### 🎯 v1.0.0 - First Stable Release
-
-- [ ] Interactive Shell
 - [ ] File System
+- [ ] Shell
 - [ ] User Programs
 
 ---
