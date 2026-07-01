@@ -1,51 +1,42 @@
-# Changelog / 更新日志
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
 本项目的重要更新都会记录在此文件中。
 
-This project follows Semantic Versioning (SemVer).
+The format is based on **Keep a Changelog**.
 
-本项目遵循语义化版本（Semantic Versioning）规范。
+Versioning follows **Semantic Versioning (SemVer)**.
 
 ---
 
-# [v0.1.0] - 2026-06-30
-
-## 🎉 Initial Development Milestone / 首个开发里程碑
+## [Unreleased]
 
 ### Added / 新增
 
-- Initial Bootloader
-- 初始 Bootloader
+- Lesson 04 documentation
+- VGA Text Mode theory
+- Hardware architecture notes
+- Documentation structure improvements
 
-- BIOS text output using `int 0x10`
-- 使用 `int 0x10` 实现 BIOS 字符输出
+### Changed / 修改
 
-- Print the first character
-- 输出第一个字符
-
-- Print a complete string
-- 输出完整字符串
-
-- Project documentation (Lesson 01–03)
-- 项目文档（Lesson 01–03）
-
-- GitHub repository initialization
-- 初始化 GitHub 仓库
-
-- SSH authentication for Git
-- Git SSH 身份认证配置
+- README updated to v0.2.0-dev
+- Documentation index updated
 
 ---
 
-## Next Goals / 下一阶段目标
+## [v0.1.0] - 2026-06-30
 
-- Direct VGA text mode output
-- 直接操作 VGA 文本模式显存
+### Added / 新增
 
-- Enter Protected Mode
-- 进入保护模式
-
-- Load the C/C++ Kernel
-- 加载 C/C++ 内核
+- Initial boot sector
+- BIOS text output
+- Print first character
+- Print string
+- Lesson 01 documentation
+- Lesson 02 documentation
+- Lesson 03 documentation
+- GitHub repository initialized
+- README
+- CHANGELOG
