@@ -1,10 +1,24 @@
 # MyOS
 
-> A hobby operating system written from scratch using Assembly, C and C++.
+> A hobby operating system built completely from scratch using Assembly, C, and C++.
 >
-> 一个使用汇编语言、C 和 C++ 从零开始编写的业余操作系统。
+> 一个使用汇编语言、C 和 C++ 从零开始开发的业余操作系统。
 
 ---
+
+## About / 关于项目
+
+### English
+
+MyOS is a hobby operating system built completely from scratch using Assembly, C, and C++.
+
+The project aims to explore computer architecture, operating system design, and low-level systems programming through hands-on development.
+
+### 中文
+
+MyOS 是一个完全从零开始、使用汇编语言、C 和 C++ 开发的业余操作系统项目。
+
+项目旨在通过亲手实现操作系统，系统学习计算机体系结构、操作系统设计以及底层系统编程。
 
 ## Current Version / 当前版本
 
@@ -12,9 +26,7 @@
 
 ## Current Stage / 当前阶段
 
-**Hardware Access (Development)**
-
-**硬件访问（开发中）**
+**Hardware Access (Development) / 硬件访问（开发中）**
 
 ---
 
@@ -55,9 +67,11 @@ The purpose of this project is not only to build a simple operating system, but 
 
 - ✅ Lesson 04 - Understanding VGA Text Mode
 - ✅ Lesson 05 - Direct VGA Memory Output
+- ✅ Lesson 06 (Version 1) - Multiple Character Output
+- ✅ Lesson 06 (Version 2) - String Output Using Loop
+- ⏳ Lesson 06 (Version 3) - Reusable Print Routine
 - ⏳ Screen Driver
 - ⏳ Cursor Control
-- ⏳ Multiple Character Output
 
 ---
 
@@ -66,15 +80,17 @@ The purpose of this project is not only to build a simple operating system, but 
 ```text
 MyOS
 │
-├── boot/           Bootloader source code
-├── build/          Compiled binaries
-├── docs/           Learning notes & lessons
-├── kernel/         Kernel source (future)
-├── drivers/        Device drivers (future)
-├── include/        Header files (future)
+├── archive/       Historical source code for each lesson
+├── boot/          Current bootloader source
+├── build/         Compiled binaries
+├── docs/          Project documentation
+├── kernel/        Kernel source (future)
+├── drivers/       Device driver source (future)
+├── include/       Header files (future)
 │
 ├── README.md
 ├── CHANGELOG.md
+├── LICENSE
 ├── Makefile
 └── .gitignore
 ```
@@ -83,72 +99,149 @@ MyOS
 
 ## Documentation / 学习文档
 
-| Lesson | Topic |
-|---------|------|
-| Lesson 01 | Bootloader |
-| Lesson 02 | Print First Character |
-| Lesson 03 | Print String |
-| Lesson 04 | Understanding VGA Text Mode |
-| Lesson 05 | Direct VGA Memory Output |
+| Lesson / 课程 | Topic / 主题 |
+|--------------|--------------|
+| Lesson 01 | Bootloader / 启动加载程序 |
+| Lesson 02 | Print First Character / 输出第一个字符 |
+| Lesson 03 | Print String / 输出字符串 |
+| Lesson 04 | Understanding VGA Text Mode / 理解 VGA 文本模式 |
+| Lesson 05 | Direct VGA Memory Output / 直接操作 VGA 显存 |
+| Lesson 06 (Version 1) | Multiple Character Output / 多字符输出 |
+| Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
 
-Detailed notes are available in the **docs/** directory.
+For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
-详细课程笔记请查看 **docs/** 目录。
+完整教程、课程笔记及学习路线请查看 **docs/README.md**。
 
 ---
 
 ## Roadmap / 开发路线
 
-### Phase 1 - Bootloader
+### Phase 1 - Bootloader / 第一阶段：Bootloader
 
-- [x] Bootloader Foundation
-- [x] BIOS Character Output
-- [x] BIOS String Output
+> Build a minimal bootloader capable of loading and displaying basic information.
+>
+> 构建最基础的 Bootloader，实现启动并完成基本信息输出。
 
-### Phase 2 - Hardware Access
-
-- [x] VGA Text Mode
-- [x] Direct VGA Memory Output
-- [x] Multiple Character Output (Version 1)
-- [ ] String Output (Version 2)
-- [ ] Screen Driver
-- [ ] Cursor Control
-
-### Phase 3 - Protected Mode
-
-- [ ] A20 Line
-- [ ] Global Descriptor Table (GDT)
-- [ ] Enter Protected Mode
-
-### Phase 4 - Kernel
-
-- [ ] C/C++ Kernel
-- [ ] Console Driver
-- [ ] Memory Management
-- [ ] Interrupt Handling
-
-### Phase 5 - System
-
-- [ ] Keyboard Driver
-- [ ] File System
-- [ ] Shell
-- [ ] User Programs
+- [x] Bootloader Foundation / Bootloader 基础
+- [x] BIOS Character Output / BIOS 字符输出
+- [x] BIOS String Output / BIOS 字符串输出
 
 ---
 
-## Build
+### Phase 2 - Hardware Access / 第二阶段：硬件访问
+
+> Learn how to communicate directly with hardware without relying on BIOS services.
+>
+> 学习如何脱离 BIOS，直接与硬件进行交互。
+
+- [x] Understanding VGA Text Mode / 理解 VGA 文本模式
+- [x] Direct VGA Memory Output / 直接操作 VGA 显存
+- [x] Multiple Character Output / 多字符输出
+- [x] String Output Using Loop / 循环输出字符串
+- [ ] Reusable Print Routine / 可复用输出函数
+- [ ] Screen Driver / 屏幕驱动
+- [ ] Cursor Control / 光标控制
+
+---
+
+### Phase 3 - Protected Mode / 第三阶段：保护模式
+
+> Switch the CPU from Real Mode to Protected Mode and prepare for kernel execution.
+>
+> 将 CPU 从实模式切换到保护模式，为内核运行做好准备。
+
+- [ ] Enable A20 Line / 开启 A20 地址线
+- [ ] Global Descriptor Table (GDT) / 全局描述符表（GDT）
+- [ ] Enter Protected Mode / 进入保护模式
+
+---
+
+### Phase 4 - Kernel / 第四阶段：内核
+
+> Build the core of the operating system, including memory and interrupt management.
+>
+> 构建操作系统核心，实现内存管理和中断处理等基础功能。
+
+- [ ] C/C++ Kernel / C/C++ 内核
+- [ ] Console Driver / 控制台驱动
+- [ ] Memory Management / 内存管理
+- [ ] Interrupt Handling / 中断处理
+
+---
+
+### Phase 5 - System / 第五阶段：系统
+
+> Develop essential system components to support user interaction and program execution.
+>
+> 开发系统基础组件，为用户交互和程序运行提供支持。
+
+- [ ] Keyboard Driver / 键盘驱动
+- [ ] File System / 文件系统
+- [ ] Shell / 命令行解释器
+- [ ] User Programs / 用户程序
+
+---
+
+### Phase 6 - Desktop / 第六阶段：桌面环境
+
+> Design a modern graphical desktop environment inspired by KDE while remaining lightweight.
+>
+> 设计一个受 KDE 启发的现代图形桌面环境，同时保持轻量化。
+
+- [ ] Window Manager / 窗口管理器
+- [ ] GUI Framework / 图形界面框架
+- [ ] Desktop Environment / 桌面环境
+
+---
+
+### Phase 7 - Ecosystem / 第七阶段：生态系统
+
+> Build a complete software ecosystem for MyOS, including development tools and applications.
+>
+> 构建 MyOS 的完整软件生态，包括开发工具和应用程序。
+
+- [ ] Package Manager / 包管理器
+- [ ] Applications / 应用程序
+- [ ] SDK / 软件开发工具包
+
+---
+
+## Vision / 项目愿景
+
+> Build a complete operating system from scratch while documenting every development step to serve as both a learning project and an open-source educational resource.
+
+> 从零开始构建一个完整的操作系统，并记录每一个开发阶段，使其既是一个实践项目，也是一个开源的操作系统学习教程。
+
+---
+
+## Requirements / 开发环境
+
+- NASM (2.16+ recommended)
+- GNU Make
+- QEMU
+- Git
+
+---
+
+## Build / 构建
 
 ```bash
 make
 ```
 
-Run with QEMU:
+## Run / 运行
 
 ```bash
 make run
 ```
 
----
+## Clean / 清理
+
+```bash
+make clean
+```
+
 
 ## Changelog / 更新日志
 
@@ -164,7 +257,11 @@ CHANGELOG.md
 
 This project is released under the MIT License.
 
-本项目采用 MIT License 开源协议。
+本项目采用 MIT License 开源。
+
+Contributions, issues and pull requests are welcome.
+
+欢迎提交 Issue 和 Pull Request。
 
 ---
 

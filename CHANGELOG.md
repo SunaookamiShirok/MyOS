@@ -17,25 +17,26 @@ This project follows the Keep a Changelog format and Semantic Versioning (SemVer
 ## [Unreleased]
 
 > Current development version: **v0.2.0-dev**
+>
+> 当前开发版本：**v0.2.0-dev**
 
-### Added
+### Added / 新增
 
-- Lesson 06 (Version 1)
-- Multiple character output
-- DI register based screen position management
+- Lesson 06 (Version 2)
+- String output using loop（循环输出字符串）
+- SI register based string traversal（基于 SI 寄存器遍历字符串）
+- Null-terminated string support（支持空字符结尾字符串）
 
-### Changed
+### Changed / 修改
 
-- Updated project roadmap
-- Updated documentation index
-- Added Lesson 06 documentation
+- Updated project roadmap（更新项目开发路线）
+- Updated documentation index（更新文档索引）
+- Added Lesson 06 (Version 2) documentation（新增 Lesson 06（第二版）文档）
 
 ---
 
 ## [v0.1.0] - 2026-06-30
 
-
-### Added / 新增
 
 - Initial boot sector
 - BIOS character output
