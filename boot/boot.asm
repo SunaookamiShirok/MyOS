@@ -1,53 +1,80 @@
-;=========================================
-; MyOS Bootloader
-; Lesson 05
-; Direct VGA Memory Output
-;=========================================
-
 org 0x7C00
 bits 16
 
 start:
 
-    cli
+    ;-----------------------------------------------------
+    ; Initialize CPU Environment
+    ;-----------------------------------------------------
 
-    ;------------------------------------
-    ; Initialize Segment Registers
-    ;------------------------------------
+    cli                     ; Disable interrupts
 
     xor ax, ax
 
-    mov ds, ax
-    mov ss, ax
-    mov sp, 0x7C00
+    mov ds, ax              ; Data Segment
+    mov ss, ax              ; Stack Segment
+    mov sp, 0x7C00          ; Initialize Stack Pointer
 
-    ;------------------------------------
-    ; Set VGA Text Mode (80x25)
-    ;------------------------------------
+    ;-----------------------------------------------------
+    ; Set VGA Text Mode (80x25 Color Text)
+    ;-----------------------------------------------------
 
     mov ax, 0x0003
     int 0x10
 
-    ;------------------------------------
+    ;-----------------------------------------------------
     ; VGA Video Memory
-    ;------------------------------------
+    ;-----------------------------------------------------
 
     mov ax, 0xB800
     mov es, ax
 
-    xor di, di
+    xor di, di              ; Screen position = 0
 
-    ; Character
-    mov al, 'A'
-    mov [es:di], al
+    ;=====================================================
+    ; Output "Hello"
+    ;=====================================================
 
-    ; Attribute
-    mov byte [es:di+1], 0x1F
+    ; H
+    mov byte [es:di], 'H'
+    mov byte [es:di+1], 0x0F
+    add di, 2
+
+    ; e
+    mov byte [es:di], 'e'
+    mov byte [es:di+1], 0x0F
+    add di, 2
+
+    ; l
+    mov byte [es:di], 'l'
+    mov byte [es:di+1], 0x0F
+    add di, 2
+
+    ; l
+    mov byte [es:di], 'l'
+    mov byte [es:di+1], 0x0F
+    add di, 2
+
+    ; o
+    mov byte [es:di], 'o'
+    mov byte [es:di+1], 0x0F
+
+;---------------------------------------------------------
+; Halt CPU
+;---------------------------------------------------------
 
 hang:
     hlt
     jmp hang
 
+;---------------------------------------------------------
+; Boot Sector Padding
+;---------------------------------------------------------
+
 times 510-($-$$) db 0
+
+;---------------------------------------------------------
+; Boot Signature
+;---------------------------------------------------------
 
 dw 0xAA55
