@@ -1,80 +1,66 @@
+;=========================================================
+; MyOS Bootloader
+; Lesson 06 (Version 2)
+; Print String Using Loop
+;=========================================================
+
 org 0x7C00
 bits 16
 
 start:
 
-    ;-----------------------------------------------------
-    ; Initialize CPU Environment
-    ;-----------------------------------------------------
-
-    cli                     ; Disable interrupts
+    cli
 
     xor ax, ax
+    mov ds, ax
+    mov ss, ax
+    mov sp, 0x7C00
 
-    mov ds, ax              ; Data Segment
-    mov ss, ax              ; Stack Segment
-    mov sp, 0x7C00          ; Initialize Stack Pointer
-
-    ;-----------------------------------------------------
-    ; Set VGA Text Mode (80x25 Color Text)
-    ;-----------------------------------------------------
-
+    ; Set text mode
     mov ax, 0x0003
     int 0x10
 
-    ;-----------------------------------------------------
-    ; VGA Video Memory
-    ;-----------------------------------------------------
-
+    ; VGA memory
     mov ax, 0xB800
     mov es, ax
 
-    xor di, di              ; Screen position = 0
+    xor di, di
 
-    ;=====================================================
-    ; Output "Hello"
-    ;=====================================================
+    ; SI -> message
+    mov si, message
 
-    ; H
-    mov byte [es:di], 'H'
+print_loop:
+
+    ; Read current character
+    mov al, [si]
+
+    ; End of string?
+    cmp al, 0
+    je hang
+
+    ; Write character
+    mov [es:di], al
+
+    ; White on black
     mov byte [es:di+1], 0x0F
+
+    ; Next character
+    inc si
+
+    ; Next screen cell
     add di, 2
 
-    ; e
-    mov byte [es:di], 'e'
-    mov byte [es:di+1], 0x0F
-    add di, 2
-
-    ; l
-    mov byte [es:di], 'l'
-    mov byte [es:di+1], 0x0F
-    add di, 2
-
-    ; l
-    mov byte [es:di], 'l'
-    mov byte [es:di+1], 0x0F
-    add di, 2
-
-    ; o
-    mov byte [es:di], 'o'
-    mov byte [es:di+1], 0x0F
-
-;---------------------------------------------------------
-; Halt CPU
-;---------------------------------------------------------
+    jmp print_loop
 
 hang:
     hlt
     jmp hang
 
 ;---------------------------------------------------------
-; Boot Sector Padding
+
+message db "Hello MyOS",0
+
 ;---------------------------------------------------------
 
 times 510-($-$$) db 0
-
-;---------------------------------------------------------
-; Boot Signature
-;---------------------------------------------------------
-
 dw 0xAA55
