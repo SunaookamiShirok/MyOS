@@ -1,70 +1,72 @@
-;========================================
-; MyOS Bootloader
-; Lesson 06 (Version 3)
-; Reusable Print Routine
-;========================================
-
 org 0x7C00
 bits 16
 
 start:
-
     cli
 
-    mov ax,0xB800
-    mov es,ax
+    xor ax, ax
+    mov ds, ax
+    mov es, ax
+    mov ss, ax
+    mov sp, 0x7C00
 
-    xor di,di
+    sti
 
-    ; Print first string
-    mov si,message1
-    call print_string
+    ; === VGA 初始化 ===
+    mov ax, 0xB800
+    mov es, ax
+    xor di, di
 
-    ; Print second string
-    mov si,message2
+    ; === 清屏 ===
+    call clear_screen
+
+    ; === 打字 ===
+    mov si, msg
     call print_string
 
 hang:
-
     hlt
     jmp hang
 
-;----------------------------------------
-; Print String Routine
-; ES -> VGA Memory
-; SI -> String
-; DI -> Screen Position
-;----------------------------------------
+; =====================
+; clear screen
+; =====================
+clear_screen:
+    pusha
 
+    xor di, di
+    mov cx, 2000
+    mov ax, 0x0720
+
+.loop:
+    mov [es:di], ax
+    add di, 2
+    loop .loop
+
+    popa
+    ret
+
+; =====================
+; print string
+; =====================
 print_string:
+    pusha
 
 .next:
-
-    lodsb               ; AL = [SI]
-
-    cmp al,0
+    lodsb
+    cmp al, 0
     je .done
 
-    mov [es:di],al
-    inc di
-
-    mov byte [es:di],0x0F
-    inc di
-
+    mov ah, 0x0F
+    mov [es:di], ax
+    add di, 2
     jmp .next
 
 .done:
-
+    popa
     ret
 
-;----------------------------------------
-; Data
-;----------------------------------------
-
-message1 db "Hello, ",0
-message2 db "MyOS!",0
-
-;----------------------------------------
+msg db "MyOS Lesson07 DEBUG OK", 0
 
 times 510-($-$$) db 0
 dw 0xAA55
