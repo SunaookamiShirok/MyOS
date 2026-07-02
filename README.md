@@ -70,7 +70,7 @@ The purpose of this project is not only to build a simple operating system, but 
 - ✅ Lesson 06 (Version 1) - Multiple Character Output
 - ✅ Lesson 06 (Version 2) - String Output Using Loop
 - ✅ Lesson 06 (Version 3) - Reusable Print Routine
-- ⏳ Lesson 07 - Screen Driver
+- ✅ Lesson 07 - Screen Driver / 屏幕驱动
 - ⏳ Cursor Control
 
 ---
@@ -107,6 +107,7 @@ MyOS
 | Lesson 06 (Version 1) | Multiple Character Output / 多字符输出 |
 | Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
 | Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
+| Lesson 07 | Screen Driver / 屏幕驱动（基础实现） |
 
 For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
@@ -139,7 +140,7 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 - [x] Multiple Character Output / 多字符输出
 - [x] String Output Using Loop / 循环输出字符串
 - [x] Reusable Print Routine / 可复用字符串输出函数
-- [ ] Screen Driver / 屏幕驱动
+- [x] Screen Driver / 屏幕驱动
 - [ ] Cursor Control / 光标控制
 
 ---

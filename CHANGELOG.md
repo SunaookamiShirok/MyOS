@@ -26,6 +26,9 @@ Changes that are under development and will be included in the next release.
 - Reusable print routine / 可复用字符串输出函数
 - CALL and RET based function invocation / 基于 CALL 与 RET 的函数调用
 - Lesson 06 (Version 3) documentation / Lesson 06（第三版）课程文档
+- Lesson 07 (Screen Driver) / Lesson 07（屏幕驱动）
+- Basic VGA screen driver implementation / 基础 VGA 屏幕驱动实现
+- Screen clear + string rendering pipeline / 清屏 + 字符串渲染流程
 
 ### Changed / 修改
 

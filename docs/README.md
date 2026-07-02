@@ -33,7 +33,9 @@ docs/
 ├── Lesson06_v1.md
 ├── Lesson06_v2.md
 ├── Lesson06_v3.md
-└── ...
+├── Lesson07.md
+└──...
+```
 
 # Lessons / 课程目录
 
@@ -47,6 +49,7 @@ docs/
 | Lesson 06 (Version 1) | Multiple Character Output / 多字符输出 |
 | Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
 | Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
+| Lesson 07 | Screen Driver / 屏幕驱动 |
 
 ---
 
@@ -85,7 +88,7 @@ Lesson 07 - Screen Driver
 |------------|---------------|
 | Current Version / 当前版本 | **v0.2.0-dev** |
 | Current Stage / 当前阶段 | **Hardware Access** |
-| Latest Lesson / 最新课程 | **Lesson 06 (Version 3)** |
+| Latest Lesson / 最新课程 | **Lesson 07** |
 
 ---
 

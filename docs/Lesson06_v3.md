@@ -2,9 +2,7 @@
 
 # Lesson 06（第三版）
 
-## Reusable Print Routine
-
-## 可复用字符串输出函数
+## Reusable Print Routine / 可复用字符串输出函数
 
 ---
 
@@ -32,9 +30,9 @@ This lesson introduces one of the most important programming concepts in operati
 
 # Learning Objectives / 学习目标
 
-After this lesson you will understand:
+After completing this lesson, you will be able to:
 
-完成本课后，你将掌握：
+完成本课后，你将能够：
 
 - CALL instruction
 - RET instruction
@@ -149,45 +147,27 @@ RET 会返回到 CALL 后面的下一条指令。
 # Program Flow / 程序执行流程
 
 ```text
-start
-
-↓
-
+Program Start
+      │
+      ▼
 CALL print_string
-
-↓
-
-print_string
-
-↓
-
+      │
+      ▼
 LODSB
-
-↓
-
-Display character
-
-↓
-
-End of string?
-
-↓
-
-No → Continue Loop
-
-↓
-
-Yes
-
-↓
-
-RET
-
-↓
-
-Back to start
+      │
+      ▼
+Character == 0 ?
+      │
+ ┌────┴────┐
+ │         │
+ No       Yes
+ │         │
+ ▼         ▼
+Write     RET
+to VGA     │
+ │         ▼
+ └────────►Return
 ```
-
 ---
 
 # Advantages / 优势
@@ -216,19 +196,21 @@ Compared with Version 2:
 
 # Comparison of Three Versions / 三个版本对比
 
-| Version | Feature | New Knowledge |
-|----------|----------|---------------|
-| Version 1 | Multiple character output | VGA memory, DI register |
-| Version 2 | String output using loop | SI, LODSB, Null-terminated string |
-| Version 3 | Reusable print routine | CALL, RET, Procedure |
+| Version   | Goal                      | New Knowledge   | Programming Idea            |
+| --------- | ------------------------- | --------------- | --------------------------- |
+| Version 1 | Print multiple characters | VGA memory, DI  | Direct hardware programming |
+| Version 2 | Print strings             | SI, LODSB, Loop | String processing           |
+| Version 3 | Reusable print routine    | CALL, RET       | Modular programming         |
+
 
 中文：
 
-| 版本 | 功能 | 学习重点 |
-|------|------|-----------|
-| Version 1 | 多字符输出 | VGA 显存、DI |
-| Version 2 | 字符串循环输出 | SI、LODSB、字符串 |
-| Version 3 | 可复用输出函数 | CALL、RET、函数封装 |
+| 版本 | 目标 | 学习重点 | 编程思想 |
+|------|------|----------|----------|
+| v1 | 多字符输出 | VGA、DI | 直接操作硬件 |
+| v2 | 字符串输出 | SI、LODSB | 字符串处理 |
+| v3 | 可复用输出函数 | CALL、RET | 模块化设计 |
+
 
 ---
 
@@ -266,9 +248,47 @@ Screen Driver
 
 ---
 
+# Source Code Evolution / 源码演进
+
+```text
+Lesson06(v1)
+
+mov [es:di], 'H'
+mov [es:di+2], 'e'
+mov [es:di+4], 'l'
+
+        │
+        ▼
+
+Lesson06(v2)
+
+lodsb
+loop
+
+        │
+        ▼
+
+Lesson06(v3)
+
+call print_string
+
+        │
+        ▼
+
+Lesson07
+
+screen driver
+```
+
+The implementation evolved from direct hardware operations to reusable procedures.
+
+本系列课程实现了从直接操作硬件到模块化程序设计的演进。
+
+---
+
 # Key Takeaways / 本课总结
 
-English
+## English
 
 - Learned CALL instruction.
 - Learned RET instruction.
@@ -276,7 +296,7 @@ English
 - Introduced modular programming.
 - Prepared for screen driver development.
 
-中文
+## 中文
 
 - 学会了 CALL 指令。
 - 学会了 RET 指令。
@@ -288,21 +308,29 @@ English
 
 # Next Lesson / 下一课
 
-Lesson 07
+## English
 
-Screen Driver
+Lesson 07 marks the transition from learning individual assembly instructions to building reusable operating system components.
 
-The next lesson will build a basic screen driver capable of:
+The screen driver will gradually encapsulate operations such as:
 
-下一课将开始编写真正的屏幕驱动，实现：
-
-- Print Character
-- Print String
+- Character Output
+- String Output
+- Cursor Management
 - New Line
-- Cursor Position
 - Screen Clear
 
-届时，我们将不再把所有逻辑都写在 Bootloader 中，而是开始构建真正意义上的驱动模块。
+## 中文
+
+Lesson 07 将标志着课程从学习单个汇编指令正式过渡到构建可复用的操作系统组件。
+
+下一课我们将开始构建真正意义上的屏幕驱动，并逐步封装：
+
+- Character Output（字符输出）
+- String Output（字符串输出）
+- Cursor Management（光标管理）
+- New Line（换行）
+- Screen Clear（清屏）
 
 ---
 
