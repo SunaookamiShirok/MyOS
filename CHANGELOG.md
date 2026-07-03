@@ -22,6 +22,26 @@ Changes that are under development and will be included in the next release.
 
 ### Added / 新增
 
+- Lesson 08 (Version 1) / Lesson 08（第一版）
+- Screen Driver Refactoring / 屏幕驱动重构
+- Reusable print_char() routine / 可复用字符输出函数
+- Software cursor state variables / 软件光标状态变量
+- Lesson 08 (Version 1) documentation / Lesson 08（第一版）课程文档
+
+### Changed / 修改
+
+- Refactored print_string() to reuse print_char() / 重构 print_string()，复用 print_char()
+- Improved screen driver architecture / 优化屏幕驱动架构
+- Updated project roadmap for Lesson 08 / 更新 Lesson 08 开发路线
+- Updated root README documentation / 更新根目录 README
+- Updated docs/README lesson index / 更新 docs/README 课程索引
+
+---
+
+## [v0.2.0] - 2026-07-03
+
+### Added / 新增
+
 - Lesson 06 (Version 3) / Lesson 06（第三版）
 - Reusable print routine / 可复用字符串输出函数
 - CALL and RET based function invocation / 基于 CALL 与 RET 的函数调用
@@ -32,9 +52,10 @@ Changes that are under development and will be included in the next release.
 
 ### Changed / 修改
 
-- Updated project roadmap for Lesson 06 (Version 3) / 更新 Lesson 06（第三版）开发路线
+- Updated project roadmap for Hardware Access stage / 更新硬件访问阶段开发路线
 - Updated root README documentation / 更新根目录 README
 - Updated docs/README lesson index / 更新 docs/README 课程索引
+- Archived Lesson 07 source code / 归档 Lesson 07 源码
 
 ---
 
@@ -60,7 +81,8 @@ Changes that are under development and will be included in the next release.
 | Version / 版本 | Status / 状态 | Description / 描述 |
 |----------------|---------------|--------------------|
 | v0.1.0 | Released | Initial Release / 初始版本 |
-| v0.2.0-dev | Development | Hardware Access Development / 硬件访问开发阶段 |
+| v0.2.0 | Released | Hardware Access Stage (Lesson07) / 硬件访问阶段（Lesson07） |
+| v0.2.1-dev | Development | Screen Driver Refactoring (Lesson08) / 屏幕驱动重构（Lesson08） |
 
 ---
 

@@ -34,7 +34,8 @@ docs/
 ├── Lesson06_v2.md
 ├── Lesson06_v3.md
 ├── Lesson07.md
-└──...
+├── Lesson08_v1.md
+└── ...
 ```
 
 # Lessons / 课程目录
@@ -50,6 +51,7 @@ docs/
 | Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
 | Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
 | Lesson 07 | Screen Driver / 屏幕驱动 |
+| Lesson 08 (Version 1) | Screen Driver Refactoring / 屏幕驱动重构 |
 
 ---
 
@@ -80,21 +82,40 @@ Lesson 06 (Version 3) - Reusable Print Routine
     │
     ▼
 Lesson 07 - Screen Driver
+    │
+    ▼
+Lesson 08 (Version 1) - Screen Driver Refactoring
+    │
+    ▼
+Lesson 08 (Version 2) - Software Cursor (Coming Soon)
+    │
+    ▼
+Lesson 08 (Version 3) - Hardware Cursor (Coming Soon)
 ```
 
 # Current Progress / 当前进度
 
 | Item / 项目 | Status / 状态 |
 |------------|---------------|
-| Current Version / 当前版本 | **v0.2.0-dev** |
-| Current Stage / 当前阶段 | **Hardware Access** |
-| Latest Lesson / 最新课程 | **Lesson 07** |
+| Current Version / 当前版本 | **v0.2.1-dev** |
+| Current Stage / 当前阶段 | **Hardware Access / 硬件访问** |
+| Latest Lesson / 最新课程 | **Lesson 08 (Version 1)** |
 
 ---
 
 > Documentation will continue to grow alongside MyOS.
 
 > 本文档将随着 MyOS 的开发持续更新。
+
+---
+
+## Next Lesson / 下一课
+
+**Lesson 08 (Version 2) — Software Cursor**
+
+Implement a software cursor based on the current screen driver.
+
+基于当前屏幕驱动实现软件光标。
 
 ---
 

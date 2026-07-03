@@ -1,3 +1,7 @@
+# Project Status
+
+> 🚧 **Project Status:** Active Development
+
 # MyOS
 
 > A hobby operating system built completely from scratch using Assembly, C, and C++.
@@ -22,11 +26,11 @@ MyOS 是一个完全从零开始、使用汇编语言、C 和 C++ 开发的业�
 
 ## Current Version / 当前版本
 
-**v0.2.0-dev**
+**v0.2.1-dev**
 
 ## Current Stage / 当前阶段
 
-**Hardware Access (Development) / 硬件访问（开发中）**
+**Phase 2: Hardware Access (Development) / 第二阶段：硬件访问（开发中）**
 
 ---
 
@@ -63,15 +67,21 @@ The purpose of this project is not only to build a simple operating system, but 
 - ✅ Print First Character
 - ✅ Print String
 
-### v0.2.0-dev
+### v0.2.1-dev
+
+Current Development Progress
+
+当前开发进度
 
 - ✅ Lesson 04 - Understanding VGA Text Mode
 - ✅ Lesson 05 - Direct VGA Memory Output
 - ✅ Lesson 06 (Version 1) - Multiple Character Output
 - ✅ Lesson 06 (Version 2) - String Output Using Loop
 - ✅ Lesson 06 (Version 3) - Reusable Print Routine
-- ✅ Lesson 07 - Screen Driver / 屏幕驱动
-- ⏳ Cursor Control
+- ✅ Lesson 07 - Basic Screen Driver / 基础屏幕驱动
+- ✅ Lesson 08 (Version 1) - Screen Driver Refactoring / 屏幕驱动重构
+- ⏳ Software Cursor / 软件光标
+- ⏳ Hardware Cursor / 硬件光标
 
 ---
 
@@ -80,13 +90,15 @@ The purpose of this project is not only to build a simple operating system, but 
 ```text
 MyOS
 │
-├── archive/       Historical source code for each lesson
+├── archives/      Historical source code for each lesson
 ├── boot/          Current bootloader source
 ├── build/         Compiled binaries
-├── docs/          Project documentation
+├── docs/          Documentation and tutorials
 ├── kernel/        Kernel source (future)
+├── scripts/       Build utilities (future) 
 ├── drivers/       Device driver source (future)
-├── include/       Header files (future)
+├── tests/         Test programs (future)
+├── include/       Kernel headers (future)
 │
 ├── README.md
 ├── CHANGELOG.md
@@ -107,7 +119,8 @@ MyOS
 | Lesson 06 (Version 1) | Multiple Character Output / 多字符输出 |
 | Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
 | Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
-| Lesson 07 | Screen Driver / 屏幕驱动（基础实现） |
+| Lesson 07 | Basic Screen Driver / 屏幕驱动（基础实现） |
+| Lesson 08 (Version 1) | Screen Driver Refactoring / 屏幕驱动重构 |
 
 For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
@@ -140,8 +153,10 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 - [x] Multiple Character Output / 多字符输出
 - [x] String Output Using Loop / 循环输出字符串
 - [x] Reusable Print Routine / 可复用字符串输出函数
-- [x] Screen Driver / 屏幕驱动
-- [ ] Cursor Control / 光标控制
+- [x] Basic Screen Driver / 屏幕驱动（基础实现）
+- [x] Screen Driver Refactoring / 屏幕驱动重构
+- [ ] Software Cursor / 软件光标
+- [ ] Hardware Cursor / 硬件光标
 
 ---
 
@@ -217,10 +232,24 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 
 ## Requirements / 开发环境
 
+### Tools / 工具
+
 - NASM (2.16+ recommended)
 - GNU Make
 - QEMU
 - Git
+
+### Supported Platforms / 支持的平台
+
+- Windows (MSYS2)
+- Linux
+- macOS
+
+### Recommended Environment / 编程环境
+
+- Visual Studio Code
+- MSYS2 (Windows)
+- Git Bash (Windows)
 
 ---
 
@@ -242,16 +271,57 @@ make run
 make clean
 ```
 
+## Debug / 调试
+
+```bash
+make debug
+```
+
+Requires **NASM**, **GNU Make**, and **QEMU**.
 
 ## Changelog / 更新日志
 
-See:
+See **CHANGELOG.md** for detailed release history.
 
-```text
-CHANGELOG.md
-```
+详细更新记录请查看 **CHANGELOG.md**。
 
 ---
+
+### Phase Progress
+
+Current development progress of each phase.
+
+各阶段开发完成情况。
+
+Phase 1  ██████████ 100%
+
+Phase 2  ████████░░  80%
+
+Phase 3  ░░░░░░░░░░   0%
+
+Phase 4  ░░░░░░░░░░   0%
+
+Phase 5  ░░░░░░░░░░   0%
+
+Phase 6  ░░░░░░░░░░   0%
+
+Phase 7  ░░░░░░░░░░   0%
+
+## Next Milestone / 下一阶段
+
+| Item            | Value                 |
+| --------------- | --------------------- |
+| Current Version | v0.2.1-dev            |
+| Current Lesson  | Lesson 08 (Version 2) |
+| Current Goal    | Software Cursor       |
+| Next Release    | v0.3.0                |
+
+
+## Planned
+
+- [ ] Lesson 08 (Version 2) - Software Cursor
+- [ ] Lesson 08 (Version 3) - Hardware Cursor
+- [ ] v0.3.0 - Protected Mode
 
 ## License / 开源协议
 
@@ -264,6 +334,12 @@ Contributions, issues and pull requests are welcome.
 欢迎提交 Issue 和 Pull Request。
 
 ---
+
+## Contributing / 贡献
+
+Contributions, bug reports, feature requests, and pull requests are welcome.
+
+欢迎提交代码、Issue、功能建议以及 Pull Request。
 
 Happy Coding!
 
