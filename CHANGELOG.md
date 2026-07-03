@@ -22,19 +22,24 @@ Changes that are under development and will be included in the next release.
 
 ### Added / 新增
 
-- Lesson 08 (Version 1) / Lesson 08（第一版）
-- Screen Driver Refactoring / 屏幕驱动重构
-- Reusable print_char() routine / 可复用字符输出函数
-- Software cursor state variables / 软件光标状态变量
-- Lesson 08 (Version 1) documentation / Lesson 08（第一版）课程文档
+#### Lesson 08 (Version 2)
+
+- Software Cursor / 软件光标
+- Disabled VGA hardware cursor / 禁用 VGA 硬件光标
+- Cursor drawing routine / 光标绘制函数
+- Character restore routine / 字符恢复函数
+- Cursor state management / 光标状态管理
 
 ### Changed / 修改
 
-- Refactored print_string() to reuse print_char() / 重构 print_string()，复用 print_char()
 - Improved screen driver architecture / 优化屏幕驱动架构
-- Updated project roadmap for Lesson 08 / 更新 Lesson 08 开发路线
-- Updated root README documentation / 更新根目录 README
-- Updated docs/README lesson index / 更新 docs/README 课程索引
+- Updated project roadmap / 更新项目开发路线
+
+### Documentation Updates / 文档更新
+
+- Added Lesson08_v2 documentation / 新增 Lesson08_v2 教程
+- Updated README.md / 更新 README
+- Updated docs/README.md / 更新 docs/README
 
 ---
 
@@ -82,8 +87,7 @@ Changes that are under development and will be included in the next release.
 |----------------|---------------|--------------------|
 | v0.1.0 | Released | Initial Release / 初始版本 |
 | v0.2.0 | Released | Hardware Access Stage (Lesson07) / 硬件访问阶段（Lesson07） |
-| v0.2.1-dev | Development | Screen Driver Refactoring (Lesson08) / 屏幕驱动重构（Lesson08） |
-
+| v0.2.1-dev | Development | Screen Driver Refactoring & Software Cursor / 屏幕驱动重构与软件光标 |
 ---
 
 > New features under development are recorded in the **Unreleased** section until the next official release.

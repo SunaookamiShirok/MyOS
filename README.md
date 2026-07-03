@@ -67,11 +67,7 @@ The purpose of this project is not only to build a simple operating system, but 
 - ✅ Print First Character
 - ✅ Print String
 
-### v0.2.1-dev
-
-Current Development Progress
-
-当前开发进度
+### v0.2.1-dev (Current Development) / 当前开发
 
 - ✅ Lesson 04 - Understanding VGA Text Mode
 - ✅ Lesson 05 - Direct VGA Memory Output
@@ -80,8 +76,8 @@ Current Development Progress
 - ✅ Lesson 06 (Version 3) - Reusable Print Routine
 - ✅ Lesson 07 - Basic Screen Driver / 基础屏幕驱动
 - ✅ Lesson 08 (Version 1) - Screen Driver Refactoring / 屏幕驱动重构
-- ⏳ Software Cursor / 软件光标
-- ⏳ Hardware Cursor / 硬件光标
+- ✅ Lesson 08 (Version 2) - Software Cursor / 软件光标
+- ⏳ Lesson 08 (Version 3) - Hardware Cursor / 硬件光标
 
 ---
 
@@ -121,6 +117,8 @@ MyOS
 | Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
 | Lesson 07 | Basic Screen Driver / 屏幕驱动（基础实现） |
 | Lesson 08 (Version 1) | Screen Driver Refactoring / 屏幕驱动重构 |
+| Lesson 08 (Version 2) | Software Cursor / 软件光标 |
+| Lesson 08 (Version 3) | Hardware Cursor / 硬件光标 |
 
 For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
@@ -155,7 +153,7 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 - [x] Reusable Print Routine / 可复用字符串输出函数
 - [x] Basic Screen Driver / 屏幕驱动（基础实现）
 - [x] Screen Driver Refactoring / 屏幕驱动重构
-- [ ] Software Cursor / 软件光标
+- [x] Software Cursor / 软件光标
 - [ ] Hardware Cursor / 硬件光标
 
 ---
@@ -277,7 +275,7 @@ make clean
 make debug
 ```
 
-Requires **NASM**, **GNU Make**, and **QEMU**.
+
 
 ## Changelog / 更新日志
 
@@ -287,15 +285,13 @@ See **CHANGELOG.md** for detailed release history.
 
 ---
 
-### Phase Progress
-
-Current development progress of each phase.
+## Development Progress / 开发进度
 
 各阶段开发完成情况。
 
 Phase 1  ██████████ 100%
 
-Phase 2  ████████░░  80%
+Phase 2  █████████░  90%
 
 Phase 3  ░░░░░░░░░░   0%
 
@@ -309,17 +305,15 @@ Phase 7  ░░░░░░░░░░   0%
 
 ## Next Milestone / 下一阶段
 
-| Item            | Value                 |
-| --------------- | --------------------- |
-| Current Version | v0.2.1-dev            |
-| Current Lesson  | Lesson 08 (Version 2) |
-| Current Goal    | Software Cursor       |
-| Next Release    | v0.3.0                |
+| Item | Value |
+|------|-------|
+| Current Version | v0.2.1-dev |
+| Current Lesson | Lesson 08 (Version 3) |
+| Current Goal | Hardware Cursor |
 
 
 ## Planned
 
-- [ ] Lesson 08 (Version 2) - Software Cursor
 - [ ] Lesson 08 (Version 3) - Hardware Cursor
 - [ ] v0.3.0 - Protected Mode
 
@@ -341,6 +335,14 @@ Contributions, bug reports, feature requests, and pull requests are welcome.
 
 欢迎提交代码、Issue、功能建议以及 Pull Request。
 
+---
+
 Happy Coding!
 
+Thanks for visiting MyOS.
+
+If you enjoy this project, consider giving it a ⭐.
+
 祝开发愉快！
+
+如果喜欢这个项目，欢迎点个 Star ⭐。

@@ -35,6 +35,7 @@ docs/
 ├── Lesson06_v3.md
 ├── Lesson07.md
 ├── Lesson08_v1.md
+├── Lesson08_v2.md
 └── ...
 ```
 
@@ -52,6 +53,8 @@ docs/
 | Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
 | Lesson 07 | Screen Driver / 屏幕驱动 |
 | Lesson 08 (Version 1) | Screen Driver Refactoring / 屏幕驱动重构 |
+| Lesson 08 (Version 2) | Software Cursor / 软件光标 |
+| Lesson 08 (Version 3) | Hardware Cursor *(Planned)* / 硬件光标 *（准备中）* |
 
 ---
 
@@ -87,7 +90,7 @@ Lesson 07 - Screen Driver
 Lesson 08 (Version 1) - Screen Driver Refactoring
     │
     ▼
-Lesson 08 (Version 2) - Software Cursor (Coming Soon)
+Lesson 08 (Version 2) - Software Cursor
     │
     ▼
 Lesson 08 (Version 3) - Hardware Cursor (Coming Soon)
