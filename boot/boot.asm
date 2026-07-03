@@ -35,19 +35,40 @@ clear_screen:
     pusha
 
     xor di, di
-    mov cx, 2000
-    mov ax, 0x0720
+    mov cx,2000
+    mov ax,0x0720
 
 .loop:
-    mov [es:di], ax
-    add di, 2
+    mov [es:di],ax
+    add di,2
     loop .loop
+
+    mov byte [cursor_x],0
+    mov byte [cursor_y],0
+    xor di,di
 
     popa
     ret
 
 ; =====================
-; print string
+; print character
+; =====================
+print_char:
+    push ax
+
+    mov ah,0x0F
+    mov [es:di],ax
+    add di,2
+
+    pop ax
+    ret
+
+; =====================
+; print character
+; Input:
+;   AL = character
+; Uses:
+;   ES:DI = VGA memory position
 ; =====================
 print_string:
     pusha
@@ -57,16 +78,29 @@ print_string:
     cmp al, 0
     je .done
 
-    mov ah, 0x0F
-    mov [es:di], ax
-    add di, 2
+    call print_char
     jmp .next
 
 .done:
     popa
     ret
 
-msg db "MyOS Lesson07 DEBUG OK", 0
+; =====================
+; Screen Driver
+; =====================
+
+cursor_x db 0
+cursor_y db 0
+
+; =====================
+; Messages
+; =====================
+
+msg db "Welcome to MyOS Lesson08_v1",0
+
+; =====================
+; Boot Signature
+; =====================
 
 times 510-($-$$) db 0
 dw 0xAA55
