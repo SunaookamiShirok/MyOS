@@ -36,8 +36,10 @@ docs/
 ├── Lesson07.md
 ├── Lesson08_v1.md
 ├── Lesson08_v2.md
+├── Lesson08_v3_1.md
+├── Lesson08_v3_2.md
+├── Lesson08_v3_3.md
 └── ...
-```
 
 # Lessons / 课程目录
 
@@ -54,7 +56,9 @@ docs/
 | Lesson 07 | Screen Driver / 屏幕驱动 |
 | Lesson 08 (Version 1) | Screen Driver Refactoring / 屏幕驱动重构 |
 | Lesson 08 (Version 2) | Software Cursor / 软件光标 |
-| Lesson 08 (Version 3) | Hardware Cursor *(Planned)* / 硬件光标 *（准备中）* |
+| Lesson 08 (Version 3.1) | Hardware Cursor Control / 硬件光标控制 |
+| Lesson 08 (Version 3.2) | Cursor Position Management / 光标位置管理 |
+| Lesson 08 (Version 3.3) | Hardware Cursor Driver / 硬件光标驱动 |
 
 ---
 
@@ -91,9 +95,18 @@ Lesson 08 (Version 1) - Screen Driver Refactoring
     │
     ▼
 Lesson 08 (Version 2) - Software Cursor
-    │
+    |
     ▼
-Lesson 08 (Version 3) - Hardware Cursor (Coming Soon)
+Lesson 08 (Version 3.1) - Hardware Cursor Control
+    |
+    ▼
+Lesson 08 (Version 3.2) - Cursor Position Management
+    |
+    ▼
+Lesson 08 (Version 3.3) - Hardware Cursor Driver
+    |
+    ▼
+Phase 3 - Protected Mode
 ```
 
 # Current Progress / 当前进度
@@ -102,7 +115,7 @@ Lesson 08 (Version 3) - Hardware Cursor (Coming Soon)
 |------------|---------------|
 | Current Version / 当前版本 | **v0.2.1-dev** |
 | Current Stage / 当前阶段 | **Hardware Access / 硬件访问** |
-| Latest Lesson / 最新课程 | **Lesson 08 (Version 1)** |
+| Latest Lesson / 最新课程 | **Lesson 08 (Version 3.1) - Hardware Cursor System** |
 
 ---
 
@@ -114,11 +127,30 @@ Lesson 08 (Version 3) - Hardware Cursor (Coming Soon)
 
 ## Next Lesson / 下一课
 
-**Lesson 08 (Version 2) — Software Cursor**
+**Lesson 08 (Version 3.1) — Hardware Cursor Control**
 
-Implement a software cursor based on the current screen driver.
+Implement VGA hardware cursor control through VGA I/O ports.
 
-基于当前屏幕驱动实现软件光标。
+通过 VGA I/O 端口实现硬件光标控制。
+
+---
+
+# Development Notes / 开发记录
+
+## Lesson 08
+
+### v3.1
+- Enable VGA hardware cursor
+- Configure cursor start/end registers
+- Test cursor visibility
+
+### v3.2
+- Implement cursor position update
+- Synchronize cursor with screen driver
+
+### v3.3
+- Integrate hardware cursor into print system
+- Complete VGA cursor driver
 
 ---
 

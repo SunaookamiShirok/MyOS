@@ -30,7 +30,7 @@ MyOS 是一个完全从零开始、使用汇编语言、C 和 C++ 开发的业�
 
 ## Current Stage / 当前阶段
 
-**Phase 2: Hardware Access (Development) / 第二阶段：硬件访问（开发中）**
+**Phase 2: Hardware Access (80% Complete) / 第二阶段：硬件访问（完成度80%）**
 
 ---
 
@@ -60,24 +60,38 @@ The purpose of this project is not only to build a simple operating system, but 
 
 ## Features / 已完成功能
 
+
 ### v0.1.0
 
 - ✅ Boot Sector
 - ✅ BIOS Text Output
-- ✅ Print First Character
 - ✅ Print String
+- ✅ Initial Documentation
 
-### v0.2.1-dev (Current Development) / 当前开发
 
-- ✅ Lesson 04 - Understanding VGA Text Mode
-- ✅ Lesson 05 - Direct VGA Memory Output
-- ✅ Lesson 06 (Version 1) - Multiple Character Output
-- ✅ Lesson 06 (Version 2) - String Output Using Loop
-- ✅ Lesson 06 (Version 3) - Reusable Print Routine
-- ✅ Lesson 07 - Basic Screen Driver / 基础屏幕驱动
-- ✅ Lesson 08 (Version 1) - Screen Driver Refactoring / 屏幕驱动重构
-- ✅ Lesson 08 (Version 2) - Software Cursor / 软件光标
-- ⏳ Lesson 08 (Version 3) - Hardware Cursor / 硬件光标
+### v0.2.1-dev
+
+
+- ✅ Lesson04 - Understanding VGA Text Mode
+- ✅ Lesson05 - Direct VGA Memory Output
+- ✅ Lesson06_v1 - Multiple Character Output
+- ✅ Lesson06_v2 - String Output Using Loop
+- ✅ Lesson06_v3 - Reusable Print Routine
+- ✅ Lesson07 - Basic Screen Driver
+- ✅ Lesson08_v1 - Screen Driver Refactoring
+- ✅ Lesson08_v2 - Software Cursor
+
+🚧 Lesson08_v3 - Hardware Cursor System
+
+The hardware cursor system is divided into three development stages:
+
+硬件光标系统分为三个开发阶段：
+
+Currently under development:
+
+- 🚧 Lesson08_v3_1 - Hardware Cursor Initialization
+- ⏳ Lesson08_v3_2 - Cursor Position Synchronization
+- ⏳ Lesson08_v3_3 - Hardware Cursor Driver Integration
 
 ---
 
@@ -86,15 +100,15 @@ The purpose of this project is not only to build a simple operating system, but 
 ```text
 MyOS
 │
-├── archives/      Historical source code for each lesson
-├── boot/          Current bootloader source
-├── build/         Compiled binaries
-├── docs/          Documentation and tutorials
-├── kernel/        Kernel source (future)
-├── scripts/       Build utilities (future) 
-├── drivers/       Device driver source (future)
-├── tests/         Test programs (future)
-├── include/       Kernel headers (future)
+├── archives/      Historical source code for each lesson / 每个课程阶段的历史源码归档
+├── boot/          Current bootloader source / 当前 Bootloader 源码
+├── build/         Compiled binaries / 编译生成文件
+├── docs/          Documentation and tutorials for each lesson / 每个课程对应的开发文档和教程
+├── kernel/        Kernel source (future) / 内核源码（未来）
+├── scripts/       Build utilities (future) / 构建工具脚本（未来）
+├── drivers/       Device driver source (future) / 设备驱动源码（未来）
+├── tests/         Test programs (future) / 测试程序（未来）
+├── include/       Kernel headers (future) / 内核头文件（未来）
 │
 ├── README.md
 ├── CHANGELOG.md
@@ -107,18 +121,20 @@ MyOS
 
 | Lesson / 课程 | Topic / 主题 |
 |--------------|--------------|
-| Lesson 01 | Bootloader / 启动加载程序 |
-| Lesson 02 | Print First Character / 输出第一个字符 |
-| Lesson 03 | Print String / 输出字符串 |
-| Lesson 04 | Understanding VGA Text Mode / 理解 VGA 文本模式 |
-| Lesson 05 | Direct VGA Memory Output / 直接操作 VGA 显存 |
-| Lesson 06 (Version 1) | Multiple Character Output / 多字符输出 |
-| Lesson 06 (Version 2) | String Output Using Loop / 循环输出字符串 |
-| Lesson 06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
-| Lesson 07 | Basic Screen Driver / 屏幕驱动（基础实现） |
-| Lesson 08 (Version 1) | Screen Driver Refactoring / 屏幕驱动重构 |
-| Lesson 08 (Version 2) | Software Cursor / 软件光标 |
-| Lesson 08 (Version 3) | Hardware Cursor / 硬件光标 |
+| Lesson01 | Bootloader / 启动加载程序 |
+| Lesson02 | Print First Character / 输出第一个字符 |
+| Lesson03 | Print String / 输出字符串 |
+| Lesson04 | Understanding VGA Text Mode / 理解 VGA 文本模式 |
+| Lesson05 | Direct VGA Memory Output / 直接操作 VGA 显存 |
+| Lesson06 (Version 1) | Multiple Character Output / 多字符输出 |
+| Lesson06 (Version 2) | String Output Using Loop / 循环输出字符串 |
+| Lesson06 (Version 3) | Reusable Print Routine / 可复用字符串输出函数 |
+| Lesson07 | Basic Screen Driver / 屏幕驱动（基础实现） |
+| Lesson08_v1 | Screen Driver Refactoring / 屏幕驱动重构 |
+| Lesson08_v2 | Software Cursor / 软件光标 |
+| Lesson08_v3_1 | Hardware Cursor Initialization / 硬件光标初始化 |
+| Lesson08_v3_2 | Cursor Position Synchronization / 光标位置同步 |
+| Lesson08_v3_3 | Hardware Cursor Driver Integration / 硬件光标驱动集成 |
 
 For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
@@ -154,8 +170,10 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 - [x] Basic Screen Driver / 屏幕驱动（基础实现）
 - [x] Screen Driver Refactoring / 屏幕驱动重构
 - [x] Software Cursor / 软件光标
-- [ ] Hardware Cursor / 硬件光标
-
+- [ ] Hardware Cursor System / 硬件光标系统
+  - 🚧 Lesson08_v3_1 Hardware Cursor Initialization / 硬件光标初始化
+  - ⏳ Lesson08_v3_2 Cursor Position Synchronization / 光标位置同步
+  - ⏳ Lesson08_v3_3 Hardware Cursor Driver Integration / 硬件光标驱动集成
 ---
 
 ### Phase 3 - Protected Mode / 第三阶段：保护模式
@@ -279,9 +297,9 @@ make debug
 
 ## Changelog / 更新日志
 
-See **CHANGELOG.md** for detailed release history.
+See [CHANGELOG.md](CHANGELOG.md) for detailed release history.
 
-详细更新记录请查看 **CHANGELOG.md**。
+详细更新记录请查看 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
@@ -291,7 +309,7 @@ See **CHANGELOG.md** for detailed release history.
 
 Phase 1  ██████████ 100%
 
-Phase 2  █████████░  90%
+Phase 2  ████████░░ 80%
 
 Phase 3  ░░░░░░░░░░   0%
 
@@ -305,17 +323,18 @@ Phase 7  ░░░░░░░░░░   0%
 
 ## Next Milestone / 下一阶段
 
+
 | Item | Value |
 |------|-------|
 | Current Version | v0.2.1-dev |
-| Current Lesson | Lesson 08 (Version 3) |
-| Current Goal | Hardware Cursor |
-
+| Current Lesson | Lesson08_v3_1 |
+| Current Goal | Implement VGA Hardware Cursor Initialization |
+| Next Milestone | Complete Hardware Access Phase |
 
 ## Planned
 
-- [ ] Lesson 08 (Version 3) - Hardware Cursor
-- [ ] v0.3.0 - Protected Mode
+- [ ] Complete Lesson08_v3 Hardware Cursor System
+- [ ] Release v0.3.0 - Protected Mode
 
 ## License / 开源协议
 

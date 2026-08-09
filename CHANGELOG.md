@@ -16,30 +16,78 @@ Versioning follows **Semantic Versioning (SemVer)**.
 
 ## [Unreleased]
 
-Changes that are under development and will be included in the next release.
+Changes planned or currently under development.
 
-当前开发中的功能，将包含在下一个正式版本中。
+计划中或正在开发中的内容。
 
-### Added / 新增
+---
 
-#### Lesson 08 (Version 2)
+## In Progress / 开发中
 
-- Software Cursor / 软件光标
-- Disabled VGA hardware cursor / 禁用 VGA 硬件光标
-- Cursor drawing routine / 光标绘制函数
-- Character restore routine / 字符恢复函数
-- Cursor state management / 光标状态管理
+### Lesson 08 - Advanced Screen Driver / 高级屏幕驱动
 
-### Changed / 修改
+#### Lesson08_v3_1 - Hardware Cursor Initialization
 
-- Improved screen driver architecture / 优化屏幕驱动架构
-- Updated project roadmap / 更新项目开发路线
+Status: In Development
+
+- Implement VGA hardware cursor support
+- Configure VGA cursor registers
+- Enable hardware cursor display
+
+
+#### Lesson08_v3_2 - Cursor Position Synchronization
+
+Status: Planned
+
+- Synchronize hardware cursor with screen output
+- Implement cursor position update
+- Improve screen driver cursor handling
+
+
+#### Lesson08_v3_3 - Hardware Cursor Driver Integration
+
+Status: Planned
+
+- Integrate hardware cursor into screen driver
+- Improve cursor movement
+- Complete cursor management system
+
+
+---
+
+### Technical Improvements / 技术改进
+
+- Improve VGA screen driver architecture
+- Improve cursor management design
+- Refactor screen output pipeline
+
+
+---
 
 ### Documentation Updates / 文档更新
 
-- Added Lesson08_v2 documentation / 新增 Lesson08_v2 教程
-- Updated README.md / 更新 README
-- Updated docs/README.md / 更新 docs/README
+- Update README.md
+- Update docs/README.md
+- Add Lesson08_v3_x documentation
+
+---
+
+## [v0.2.1-dev]
+
+### Added / 新增
+
+- Lesson08_v1 Screen Driver Refactoring
+- Lesson08_v2 Software Cursor
+- Cursor state management foundation
+
+### Changed / 修改
+
+- Improved screen driver architecture
+- Improved screen output structure
+
+### Next Development / 下一阶段开发
+
+- Lesson08_v3 Hardware Cursor System
 
 ---
 
@@ -47,20 +95,23 @@ Changes that are under development and will be included in the next release.
 
 ### Added / 新增
 
-- Lesson 06 (Version 3) / Lesson 06（第三版）
-- Reusable print routine / 可复用字符串输出函数
-- CALL and RET based function invocation / 基于 CALL 与 RET 的函数调用
-- Lesson 06 (Version 3) documentation / Lesson 06（第三版）课程文档
-- Lesson 07 (Screen Driver) / Lesson 07（屏幕驱动）
-- Basic VGA screen driver implementation / 基础 VGA 屏幕驱动实现
-- Screen clear + string rendering pipeline / 清屏 + 字符串渲染流程
+- Lesson04 Understanding VGA Text Mode
+- Lesson05 Direct VGA Memory Output
+- Lesson06_v1 Multiple Character Output
+- Lesson06_v2 String Output Using Loop
+- Lesson06_v3 Reusable Print Routine
+- CALL and RET based function invocation
+- Lesson07 Basic Screen Driver
+- Screen clear and string rendering pipeline
+
 
 ### Changed / 修改
 
-- Updated project roadmap for Hardware Access stage / 更新硬件访问阶段开发路线
-- Updated root README documentation / 更新根目录 README
-- Updated docs/README lesson index / 更新 docs/README 课程索引
-- Archived Lesson 07 source code / 归档 Lesson 07 源码
+- Updated Hardware Access roadmap
+- Updated README documentation
+- Updated docs structure
+- Archived previous lesson source code
+
 
 ---
 
@@ -68,28 +119,29 @@ Changes that are under development and will be included in the next release.
 
 ### Added / 新增
 
-- Initial boot sector / 初始 Boot Sector
-- BIOS text output / BIOS 文本输出
-- Print first character / 输出第一个字符
-- Print string / 输出字符串
-- Lesson 01 documentation / Lesson 01 文档
-- Lesson 02 documentation / Lesson 02 文档
-- Lesson 03 documentation / Lesson 03 文档
-- GitHub repository initialized / 初始化 GitHub 仓库
-- README.md
-- CHANGELOG.md
+- Initial boot sector
+- BIOS text output
+- Print first character
+- Print string
+- Initial documentation
+- GitHub repository initialization
+
 
 ---
 
 ## Version History / 版本历史
 
-| Version / 版本 | Status / 状态 | Description / 描述 |
-|----------------|---------------|--------------------|
-| v0.1.0 | Released | Initial Release / 初始版本 |
-| v0.2.0 | Released | Hardware Access Stage (Lesson07) / 硬件访问阶段（Lesson07） |
-| v0.2.1-dev | Development | Screen Driver Refactoring & Software Cursor / 屏幕驱动重构与软件光标 |
+
+| Version | Status | Description |
+|-|-|-|
+| v0.1.0 | Released | Initial Release |
+| v0.2.0 | Released | Hardware Access Stage |
+| v0.2.1-dev | Development | Lesson08 Software Cursor Stage |
+| Unreleased | Development | Lesson08 Advanced Screen Driver |
+
+
 ---
 
-> New features under development are recorded in the **Unreleased** section until the next official release.
+New features under development are recorded in the Unreleased section.
 
-> 开发中的新功能将在正式发布前统一记录在 **Unreleased** 部分。
+开发中的功能将在正式发布前记录于 Unreleased 部分。
