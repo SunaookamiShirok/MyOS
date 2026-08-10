@@ -14,7 +14,7 @@ Versioning follows **Semantic Versioning (SemVer)**.
 
 ---
 
-## [Unreleased]
+# [Unreleased]
 
 Changes planned or currently under development.
 
@@ -22,78 +22,135 @@ Changes planned or currently under development.
 
 ---
 
-## In Progress / 开发中
+## Lesson08 - Advanced Screen Driver / 高级屏幕驱动
 
-### Lesson 08 - Advanced Screen Driver / 高级屏幕驱动
-
-#### Lesson08_v3_1 - Hardware Cursor Initialization
-
-Status: In Development
-
-- Implement VGA hardware cursor support
-- Configure VGA cursor registers
-- Enable hardware cursor display
-
-
-#### Lesson08_v3_2 - Cursor Position Synchronization
+### Lesson08_v3_3 - Hardware Cursor Driver Integration
 
 Status: Planned
 
-- Synchronize hardware cursor with screen output
-- Implement cursor position update
-- Improve screen driver cursor handling
-
-
-#### Lesson08_v3_3 - Hardware Cursor Driver Integration
-
-Status: Planned
-
-- Integrate hardware cursor into screen driver
-- Improve cursor movement
-- Complete cursor management system
+- Integrate hardware cursor into the complete screen driver
+- Improve cursor movement control
+- Add cursor enable/disable management
+- Prepare foundation for higher-level text console system
 
 
 ---
 
-### Technical Improvements / 技术改进
+## Technical Improvements / 技术改进
 
 - Improve VGA screen driver architecture
-- Improve cursor management design
-- Refactor screen output pipeline
+- Improve cursor management mechanism
+- Prepare text console framework
 
 
 ---
 
-### Documentation Updates / 文档更新
+## Documentation Updates / 文档更新
 
 - Update README.md
 - Update docs/README.md
-- Add Lesson08_v3_x documentation
+- Add Lesson08_v3_3 documentation
+
 
 ---
 
-## [v0.2.1-dev]
+# [v0.2.1-dev]
 
-### Added / 新增
+Development Version
+
+开发版本
+
+---
+
+## Added / 新增
+
+### Lesson08 Advanced Screen Driver
 
 - Lesson08_v1 Screen Driver Refactoring
-- Lesson08_v2 Software Cursor
-- Cursor state management foundation
+- Lesson08_v2 Software Cursor Coordinate System
+- Lesson08_v3_1 VGA Hardware Cursor Initialization
+- Lesson08_v3_2 Cursor Position Synchronization
 
-### Changed / 修改
 
-- Improved screen driver architecture
-- Improved screen output structure
+### VGA Hardware Cursor Support
 
-### Next Development / 下一阶段开发
+- Added VGA CRT Controller register access
+- Added hardware cursor initialization
+- Added cursor scan line configuration
+- Added hardware cursor position update mechanism
 
-- Lesson08_v3 Hardware Cursor System
 
 ---
 
-## [v0.2.0] - 2026-07-03
+## Changed / 修改
 
-### Added / 新增
+- Improved screen driver architecture
+- Added software cursor coordinate management
+- Connected software cursor coordinates with VGA hardware cursor
+- Improved text output pipeline
+
+
+---
+
+## Completed / 已完成
+
+- Software cursor coordinate system
+- VGA hardware cursor initialization
+- Hardware cursor position synchronization
+- Character output based on cursor coordinates
+- Basic cursor position management
+
+
+---
+
+## Technical Details / 技术细节
+
+### VGA Cursor Register Access
+
+Accessed VGA CRT Controller through I/O ports:
+
+```text
+Index Port : 0x3D4
+Data Port  : 0x3D5
+```
+
+Cursor location registers:
+
+```text
+Register 0x0E : Cursor offset high byte
+Register 0x0F : Cursor offset low byte
+```
+
+---
+
+
+### Cursor Position Calculation
+
+Software cursor coordinates:
+
+```text
+cursor_x : Column position
+cursor_y : Row position
+```
+
+Converted into VGA cursor offset:
+
+```text
+offset = cursor_y * 80 + cursor_x
+```
+
+---
+
+## Next Development / 下一阶段开发
+
+- Lesson08_v3_3 Hardware Cursor Driver Integration
+
+
+---
+
+# [v0.2.0] - 2026-07-03
+
+## Added / 新增
 
 - Lesson04 Understanding VGA Text Mode
 - Lesson05 Direct VGA Memory Output
@@ -105,7 +162,7 @@ Status: Planned
 - Screen clear and string rendering pipeline
 
 
-### Changed / 修改
+## Changed / 修改
 
 - Updated Hardware Access roadmap
 - Updated README documentation
@@ -115,9 +172,9 @@ Status: Planned
 
 ---
 
-## [v0.1.0] - 2026-06-30
+# [v0.1.0] - 2026-06-30
 
-### Added / 新增
+## Added / 新增
 
 - Initial boot sector
 - BIOS text output
@@ -129,15 +186,14 @@ Status: Planned
 
 ---
 
-## Version History / 版本历史
-
+# Version History / 版本历史
 
 | Version | Status | Description |
-|-|-|-|
+|---------|--------|-------------|
 | v0.1.0 | Released | Initial Release |
 | v0.2.0 | Released | Hardware Access Stage |
-| v0.2.1-dev | Development | Lesson08 Software Cursor Stage |
-| Unreleased | Development | Lesson08 Advanced Screen Driver |
+| v0.2.1-dev | Development | Lesson08 Advanced Screen Driver Development |
+| Unreleased | Planned | Lesson08_v3_3 Future Development |
 
 
 ---
