@@ -1,6 +1,7 @@
 # Project Status
 
 > 🚧 **Project Status:** Active Development
+> 🚧 Development Version: v0.2.1-dev
 
 # MyOS
 
@@ -28,9 +29,25 @@ MyOS 是一个完全从零开始、使用汇编语言、C 和 C++ 开发的业�
 
 **v0.2.1-dev**
 
+## Current Development / 当前开发
+
+| Item | Status |
+|------|--------|
+| Lesson08_v3_1 Hardware Cursor Initialization | ✅ Completed |
+| Lesson08_v3_2 Cursor Position Synchronization | ✅ Completed |
+| Lesson08_v3_3 Hardware Cursor Driver Integration | 🚧 In Development |
+
+Current focus:
+
+Implementing a complete VGA hardware cursor driver layer and preparing the foundation for text console output.
+
+当前重点：
+
+实现完整 VGA 硬件光标驱动层，并为后续文本控制台系统提供基础。
+
 ## Current Stage / 当前阶段
 
-**Phase 2: Hardware Access (80% Complete) / 第二阶段：硬件访问（完成度80%）**
+**Phase 2: Hardware Access (85% Complete) / 第二阶段：硬件访问（完成度85%）**
 
 ---
 
@@ -71,7 +88,6 @@ The purpose of this project is not only to build a simple operating system, but 
 
 ### v0.2.1-dev
 
-
 - ✅ Lesson04 - Understanding VGA Text Mode
 - ✅ Lesson05 - Direct VGA Memory Output
 - ✅ Lesson06_v1 - Multiple Character Output
@@ -81,19 +97,21 @@ The purpose of this project is not only to build a simple operating system, but 
 - ✅ Lesson08_v1 - Screen Driver Refactoring
 - ✅ Lesson08_v2 - Software Cursor
 
-🚧 Lesson08_v3 - Hardware Cursor System
+### Lesson08_v3 - Hardware Cursor System
 
-The hardware cursor system is divided into three development stages:
+Completed:
 
-硬件光标系统分为三个开发阶段：
+- ✅ Lesson08_v3_1 - Hardware Cursor Initialization
+- ✅ Lesson08_v3_2 - Cursor Position Synchronization
 
-Currently under development:
+Current Development:
 
-- 🚧 Lesson08_v3_1 - Hardware Cursor Initialization
-- ⏳ Lesson08_v3_2 - Cursor Position Synchronization
-- ⏳ Lesson08_v3_3 - Hardware Cursor Driver Integration
+- 🚧 Lesson08_v3_3 - Hardware Cursor Driver Integration
 
----
+Next:
+
+- ⏳ Complete Lesson08_v3 Hardware Cursor System
+- ⏳ Complete Phase 2 Hardware Access
 
 ## Project Structure / 项目结构
 
@@ -101,12 +119,12 @@ Currently under development:
 MyOS
 │
 ├── archives/      Historical source code for each lesson / 每个课程阶段的历史源码归档
-├── boot/          Current bootloader source / 当前 Bootloader 源码
+├── boot/          Current bootloader implementation / 当前 Bootloader 实现
 ├── build/         Compiled binaries / 编译生成文件
 ├── docs/          Documentation and tutorials for each lesson / 每个课程对应的开发文档和教程
 ├── kernel/        Kernel source (future) / 内核源码（未来）
 ├── scripts/       Build utilities (future) / 构建工具脚本（未来）
-├── drivers/       Device driver source (future) / 设备驱动源码（未来）
+├── drivers/       Device driver source / 设备驱动源码
 ├── tests/         Test programs (future) / 测试程序（未来）
 ├── include/       Kernel headers (future) / 内核头文件（未来）
 │
@@ -134,7 +152,7 @@ MyOS
 | Lesson08_v2 | Software Cursor / 软件光标 |
 | Lesson08_v3_1 | Hardware Cursor Initialization / 硬件光标初始化 |
 | Lesson08_v3_2 | Cursor Position Synchronization / 光标位置同步 |
-| Lesson08_v3_3 | Hardware Cursor Driver Integration / 硬件光标驱动集成 |
+| Lesson08_v3_3 | Hardware Cursor Driver Integration / 硬件光标驱动集成（开发中） |
 
 For detailed tutorials, lesson notes, and the complete learning roadmap, please see **docs/README.md**.
 
@@ -170,10 +188,10 @@ For detailed tutorials, lesson notes, and the complete learning roadmap, please 
 - [x] Basic Screen Driver / 屏幕驱动（基础实现）
 - [x] Screen Driver Refactoring / 屏幕驱动重构
 - [x] Software Cursor / 软件光标
-- [ ] Hardware Cursor System / 硬件光标系统
-  - 🚧 Lesson08_v3_1 Hardware Cursor Initialization / 硬件光标初始化
-  - ⏳ Lesson08_v3_2 Cursor Position Synchronization / 光标位置同步
-  - ⏳ Lesson08_v3_3 Hardware Cursor Driver Integration / 硬件光标驱动集成
+- 🚧 Hardware Cursor System / 硬件光标系统
+  - [x] Lesson08_v3_1 Hardware Cursor Initialization / 硬件光标初始化
+  - [x] Lesson08_v3_2 Cursor Position Synchronization / 光标位置同步
+  - [ ] 🚧 Lesson08_v3_3 Hardware Cursor Driver Integration / 硬件光标驱动集成
 ---
 
 ### Phase 3 - Protected Mode / 第三阶段：保护模式
@@ -297,9 +315,9 @@ make debug
 
 ## Changelog / 更新日志
 
-See [CHANGELOG.md](CHANGELOG.md) for detailed release history.
+For detailed version history, please see [CHANGELOG.md](CHANGELOG.md).
 
-详细更新记录请查看 [CHANGELOG.md](CHANGELOG.md)。
+详细版本记录请查看 [CHANGELOG.md](CHANGELOG.md)。
 
 ---
 
@@ -309,31 +327,31 @@ See [CHANGELOG.md](CHANGELOG.md) for detailed release history.
 
 Phase 1  ██████████ 100%
 
-Phase 2  ████████░░ 80%
+Phase 2  ████████░░ 85%
 
-Phase 3  ░░░░░░░░░░   0%
+Phase 3  ░░░░░░░░░░ 0%
 
-Phase 4  ░░░░░░░░░░   0%
+Phase 4  ░░░░░░░░░░ 0%
 
-Phase 5  ░░░░░░░░░░   0%
+Phase 5  ░░░░░░░░░░ 0%
 
-Phase 6  ░░░░░░░░░░   0%
+Phase 6  ░░░░░░░░░░ 0%
 
-Phase 7  ░░░░░░░░░░   0%
+Phase 7  ░░░░░░░░░░ 0%
 
 ## Next Milestone / 下一阶段
 
-
-| Item | Value |
-|------|-------|
-| Current Version | v0.2.1-dev |
-| Current Lesson | Lesson08_v3_1 |
-| Current Goal | Implement VGA Hardware Cursor Initialization |
-| Next Milestone | Complete Hardware Access Phase |
+| Item            | Value                                                        |
+| --------------- | ------------------------------------------------------------ |
+| Current Version | v0.2.1-dev                                                   |
+| Current Lesson  | Lesson08_v3_3                                                |
+| Current Goal    | Complete Hardware Cursor Driver Layer and Console Foundation |
+| Next Milestone  | Complete Hardware Access Phase                               |
 
 ## Planned
 
 - [ ] Complete Lesson08_v3 Hardware Cursor System
+- [ ] Complete Phase 2 Hardware Access
 - [ ] Release v0.3.0 - Protected Mode
 
 ## License / 开源协议
